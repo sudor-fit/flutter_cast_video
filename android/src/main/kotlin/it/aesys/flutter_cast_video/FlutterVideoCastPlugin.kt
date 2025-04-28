@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
-import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** FlutterVideoCastPlugin */
 public class FlutterVideoCastPlugin : FlutterPlugin, ActivityAware {
@@ -29,17 +28,17 @@ public class FlutterVideoCastPlugin : FlutterPlugin, ActivityAware {
     // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
     // depending on the user's project. onAttachedToEngine or registerWith must both be defined
     // in the same class.
-    companion object {
-        @JvmStatic
-        fun registerWith(registrar: Registrar) {
-            registrar
-                .platformViewRegistry()
-                .registerViewFactory(
-                    "ChromeCastButton",
-                    ChromeCastFactory(registrar.messenger())
-                )
-        }
-    }
+//    companion object {
+//        @JvmStatic
+//        fun registerWith(registrar: Registrar) {
+//            registrar
+//                .platformViewRegistry()
+//                .registerViewFactory(
+//                    "ChromeCastButton",
+//                    ChromeCastFactory(registrar.messenger())
+//                )
+//        }
+//    }
 
     override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
 
